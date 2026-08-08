@@ -1,6 +1,86 @@
-@charset "UTF-8";
-*/todas as medias*/
+@charset "  UTF-8";
 
-@media {
-  
+@media print {
+  * {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  main {
+    border: 3px solid black ;
+  }
+
+  main h1 {
+    width: 100vw;
+    text-shadow: none;
+    color: black;
+  }
+
+  main::after {
+    content: 'Essa impressao foi feita atraves do curso em video';
+    text-decoration: underline;
+  }
+
+  #phone { display: none;}
+
+  #tablet {display: none;}
+
+  #print {display: block;}
+
+  #pc {display: none;}
+
+  #tv {display: none;}
+}
+
+@media screen and (min-width:768px) and (max-width:991.98px) {
+  body {
+    background-image: url(../imagens/back-tablet.jpg);
+  }
+
+  #phone { display: none;}
+
+  #tablet {display: block;}
+
+  #print {display: none;}
+
+  #pc {display: none;}
+
+  #tv {display: none;}
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+  body {
+    background-image: url(../imagens/back-pc.jpg);
+  }
+
+  #phone { display: none;}
+
+  #tablet {display: none;}
+
+  #print {display: none;}
+
+  #pc {display: block;}
+
+  #tv {display: none;}
+}
+
+
+@media screen and (min-width:1200px) and (max-width:1399px) {
+  body {
+    background-image: url(../imagens/back-tv.jpg);
+  }
+
+  main {
+    width: 700px;
+  }
+
+  #phone { display: none;}
+
+  #tablet {display: none;}
+
+  #print {display: none;}
+
+  #pc {display: none;}
+
+  #tv {display: block;}
+}
 }
